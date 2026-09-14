@@ -2,6 +2,15 @@
   "name": "api",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.js",
+    "start": "tsx src/index.js",
+    "test": "vitest run",
+    "db:generate": "prisma generate --config prisma7.config.ts",
+    "db:migrate": "prisma migrate dev --config prisma7.config.ts",
+    "db:deploy": "prisma migrate deploy --config prisma7.config.ts"
+  },
   "dependencies": {
     "@better-auth/prisma-adapter": "^1.7.4",
     "@prisma/adapter-pg": "^7.10.0",
@@ -16,6 +25,7 @@
     "pg": "^8.23.0",
     "pino": "^10.3.1",
     "pino-http": "^11.0.0",
+    "shared": "workspace:*",
     "stripe": "^22.6.2",
     "tsx": "^4.23.13",
     "zod": "^4.6.1"

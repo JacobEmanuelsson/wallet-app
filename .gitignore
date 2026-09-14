@@ -40,3 +40,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Share setup examples, never local credentials
+!.env.example
+/apps/api/src/generated/prisma/
